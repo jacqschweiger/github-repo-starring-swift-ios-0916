@@ -29,7 +29,7 @@ class ReposDataStoreSpec: QuickSpec {
                 let store = ReposDataStore.sharedInstance
                 
                 waitUntil(action: { (done) in
-                    store.getRepositories {
+                    store.getRepositoriesFromAPI {
                         expect(store.repositories.count).to(equal(2))
                         
                         let repo1 = store.repositories[0]

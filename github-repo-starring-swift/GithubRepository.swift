@@ -1,29 +1,25 @@
 //
-//  GithubRepository.swift
-//  github-repo-starring-swift
+//  FISGithubRepository.swift
+//  github-repo-list-swift
 //
-//  Created by Haaris Muneer on 6/28/16.
+//  Created by susan lovaglio on 10/23/16.
 //  Copyright © 2016 Flatiron School. All rights reserved.
 //
 
 import UIKit
 
 class GithubRepository {
+    //set up and initialization for structure of a GitHubRepository
+    
     var fullName: String
     var htmlURL: URL
     var repositoryID: String
-    
-    init(dictionary: [String : Any]) {
-        guard let
-            name = dictionary["full_name"] as? String,
-            let valueAsString = dictionary["html_url"] as? String,
-            let valueAsURL = URL(string: valueAsString),
-            let repoID = dictionary["id"] as? Int
-            else { fatalError("Could not create repository object from supplied dictionary") }
-        
-        htmlURL = valueAsURL
-        fullName = name
-        repositoryID = String(repoID)
+
+    init(dictionary: [String: Any]){
+        self.fullName = dictionary["full_name"] as! String
+        self.htmlURL = URL(string: (dictionary["html_url"] as! String))!
+        self.repositoryID = String(dictionary["id"] as! Int)
     }
+
     
 }

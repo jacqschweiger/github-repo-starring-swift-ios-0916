@@ -24,7 +24,8 @@ class ReposTableViewControllerSpec: QuickSpec {
 //            unwrappedWindow.rootViewController = vc
 //            unwrappedWindow.makeKeyAndVisible()
 //        }
-//
+        
+        
 //        let tester = KIFUITestActor()
 //        let tableView = tester?.waitForView(withAccessibilityLabel: "tableView") as! UITableView
 //        let indexPath = IndexPath(row: 1, section: 0)
@@ -43,7 +44,7 @@ class ReposTableViewControllerSpec: QuickSpec {
 //                expect(cell?.textLabel?.text).to(equal("wycats/merb-core"))
 //            }
 //        }
-//
+        
 //        describe("starring and unstarring repos") {
 //            let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
 //            it("should unstar a starred repo") {
